@@ -15,7 +15,7 @@ const Grid = ({ homeRepo, repoList, username }) => {
     const [follwersData, setFollwersData] = useState([])
 
     useEffect(() => {
-      if(checkUser.length !=0) {
+      if(checkUser.length !==0) {
         let followersData = async() => {
             let response = await fetch(checkUser.followers_url)
             let jsonData = await response.json()
